@@ -1,0 +1,218 @@
+/* ===== Tienda de mascotas / Veterinaria ===== */
+
+:root {
+    --verde: #2f9e8f;
+    --verde-oscuro: #1f6f65;
+    --naranja: #ff9f45;
+    --naranja-oscuro: #e8832a;
+    --crema: #fff8ee;
+    --celeste: #e3f4f1;
+    --texto: #2b3a3a;
+    --borde: #cfe6e1;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 0 40px 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: var(--texto);
+    background-color: var(--crema);
+    line-height: 1.5;
+}
+
+/* ===== Barra de navegación ===== */
+nav {
+    background-color: var(--verde);
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-bottom: 5px solid var(--naranja);
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--verde-oscuro);
+}
+
+/* ===== Títulos ===== */
+h1 {
+    text-align: center;
+    color: var(--verde-oscuro);
+    margin: 30px 20px 20px 20px;
+    font-size: 2rem;
+}
+
+h1::before {
+    content: "🐾 ";
+}
+
+h1::after {
+    content: " 🐾";
+}
+
+h2 {
+    text-align: center;
+    color: var(--verde-oscuro);
+    margin: 30px 20px 15px 20px;
+}
+
+/* ===== Formulario ===== */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--blanco);
+    border: 2px solid var(--borde);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(47, 158, 143, 0.15);
+}
+
+fieldset {
+    border: 2px dashed var(--verde);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: var(--celeste);
+}
+
+legend {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 14px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border: 2px solid var(--borde);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--blanco);
+    color: var(--texto);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(47, 158, 143, 0.2);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--verde);
+    margin: 0 4px 0 10px;
+    width: auto;
+}
+
+/* ===== Botones ===== */
+button {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--blanco);
+    background-color: var(--naranja);
+    transition: background-color 0.2s;
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: var(--naranja-oscuro);
+}
+
+button[type="reset"] {
+    background-color: var(--verde);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--verde-oscuro);
+}
+
+/* ===== Resultados ===== */
+hr {
+    max-width: 700px;
+    border: none;
+    border-top: 3px dotted var(--naranja);
+    margin: 30px auto;
+}
+
+#resultado {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+div#resultado {
+    background-color: var(--blanco);
+    border: 2px solid var(--borde);
+    border-radius: 12px;
+    padding: 15px 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    border: 2px solid var(--borde) !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--verde);
+    color: var(--blanco);
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--borde);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--celeste);
+}
+
+/* ===== Pantallas pequeñas ===== */
+@media (max-width: 600px) {
+    form {
+        margin: 0 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
